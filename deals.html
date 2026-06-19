@@ -1,45 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Shopper's Finds Deals</title>
 
 <style>
-body{
-font-family:Arial,sans-serif;
-background:#f4f8ff;
+
+*{
 margin:0;
-padding:30px;
+padding:0;
+box-sizing:border-box;
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 }
 
-h1{
+body{
+background:linear-gradient(180deg,#eef6ff,#ffffff);
+overflow-x:hidden;
+}
+
+.hero{
+background:linear-gradient(135deg,#0066ff,#00b7ff);
+padding:60px 20px;
 text-align:center;
+color:white;
+position:relative;
+}
+
+.hero h1{
+font-size:3rem;
+font-weight:900;
+animation:fadeUp 1s ease;
+}
+
+.hero p{
+margin-top:15px;
+font-size:1.1rem;
+animation:fadeUp 1.3s ease;
+}
+
+.back-btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 30px;
+background:white;
 color:#0066ff;
+font-weight:800;
+text-decoration:none;
+border-radius:50px;
+border:3px solid black;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
 }
 
 .product{
 background:white;
 padding:25px;
-border-radius:20px;
-margin:20px auto;
-max-width:700px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
+border-radius:30px;
+margin-bottom:35px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+animation:fadeUp 1s ease;
+transition:0.3s;
 }
-</style>
 
+.product:hover{
+transform:translateY(-5px);
+}
+
+.product h2{
+color:#0066ff;
+font-size:2rem;
+margin-top:20px;
+}
+
+.product p{
+font-size:1.1rem;
+margin-top:15px;
+line-height:1.7;
+}
+
+.price{
+font-size:2.5rem;
+font-weight:900;
+color:#00b050;
+margin-top:15px;
+}
+
+.discount{
+font-size:1.2rem;
+font-weight:800;
+color:#ff3b30;
+margin-top:10px;
+}
+
+.buy-btn{
+display:inline-block;
+margin-top:20px;
+padding:18px 35px;
+background:linear-gradient(135deg,#0066ff,#00b7ff);
+color:white;
+text-decoration:none;
+font-weight:800;
+border-radius:60px;
+border:4px solid black;
+box-shadow:0 10px 25px rgba(0,102,255,0.3);
+}
+
+video{
+width:100%;
+max-width:450px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+footer{
+background:#0066ff;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
 </head>
+
 <body>
+
+<section class="hero">
 
 <h1>🔥 Today's Best Deals</h1>
 
-<div class="product">
-<h2>Purple Teeth Whitening</h2>
-<p>₹249</p>
+<p>
+Hand-picked offers, discounts and trending products selected by Shopper's Finds.
+</p>
+
+<a href="index.html" class="back-btn">
+⬅ Back To Home
+</a>
+
+</section>
+
+<div class="container">
+
+<div class="product" align="center">
+
+<video controls>
+<source src="f712e2f0-d3e6-4330-80ed-4a9501e9a162.mov">
+</video>
+
+<h2>PURPLE TEETH WHITENING</h2>
+
+<p>
+<strong>Strips Pack of 7 to make your teeth appear whiter instantly!</strong>
+</p>
+
+<div class="price">₹249</div>
+
+<a href="https://link.amazon/B0i3yra42" target="_blank" class="buy-btn">
+🛒 Grab This Deal
+</a>
+
 </div>
 
-<div class="product">
-<h2>Smart Silicone Book Mark</h2>
-<p>₹249</p>
+<div class="product" align="center">
+
+<video controls>
+<source src="4ac8fa8c-4f50-42ff-9415-172128c53605.mov">
+</video>
+
+<h2>SMART SILICONE BOOK MARK</h2>
+
+<p>
+<strong>
+Never lose your page again! A flexible, durable and stylish silicone bookmark designed for students, readers and book lovers.
+</strong>
+</p>
+
+<div class="discount">🔥 50% OFF</div>
+
+<div class="price">₹249</div>
+
+<a href="https://amzn.to/4vbJEql" target="_blank" class="buy-btn">
+📚 Get Yours Today
+</a>
+
 </div>
+
+</div>
+
+<footer>
+
+© 2026 Shopper's Finds • Discover More • Save More
+
+</footer>
 
 </body>
 </html>
