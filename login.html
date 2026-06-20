@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shopper's Finds - Login</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#0066ff,#00bfff);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.login-box{
+background:white;
+width:90%;
+max-width:400px;
+padding:30px;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+.logo{
+width:90px;
+height:90px;
+border-radius:20px;
+margin-bottom:15px;
+}
+
+h1{
+color:#0066ff;
+margin-bottom:5px;
+}
+
+p{
+color:#666;
+margin-bottom:25px;
+}
+
+input{
+width:90%;
+padding:15px;
+margin:10px 0;
+border:2px solid #0066ff;
+border-radius:15px;
+font-size:16px;
+outline:none;
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:15px;
+background:linear-gradient(135deg,#0066ff,#00bfff);
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+transform:scale(1.03);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+<img src="DCEB2DE4-214C-428E-B03C-C2185778806E.jpeg" class="logo">
+
+<h1>Shopper's Finds</h1>
+
+<p>Login or create your account</p>
+
+<input type="text" id="name" placeholder="Your Name">
+
+<input type="email" id="email" placeholder="Your Email">
+
+<button onclick="signup()">🚀 Continue</button>
+
+</div>
+
+<script>
+
+function signup(){
+
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+
+if(name==="" || email===""){
+alert("Please fill all fields");
+return;
+}
+
+localStorage.setItem("sf_name",name);
+localStorage.setItem("sf_email",email);
+
+window.location.href="profile.html";
+
+}
+
+</script>
+
+</body>
+</html>
