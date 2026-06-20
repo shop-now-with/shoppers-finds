@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopper's Finds - Profile</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0066ff,#00bfff);
+min-height:100vh;
+padding:20px;
+}
+
+.profile-container{
+max-width:500px;
+margin:30px auto;
+background:white;
+border-radius:30px;
+padding:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.profile-header{
+text-align:center;
+}
+
+.profile-pic{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #0066ff;
+margin-bottom:15px;
+}
+
+h1{
+color:#0066ff;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#666;
+margin-bottom:20px;
+}
+
+.section-title{
+font-size:20px;
+font-weight:bold;
+color:#0066ff;
+margin-top:25px;
+margin-bottom:10px;
+}
+
+.input-box{
+width:100%;
+padding:15px;
+border:2px solid #0066ff;
+border-radius:15px;
+margin-bottom:15px;
+font-size:16px;
+}
+
+.save-btn{
+width:100%;
+padding:15px;
+border:none;
+border-radius:15px;
+background:linear-gradient(135deg,#0066ff,#00bfff);
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+margin-top:10px;
+}
+
+.save-btn:hover{
+opacity:0.9;
+}
+
+.setting-card{
+background:#f5f8ff;
+padding:15px;
+border-radius:15px;
+margin-top:10px;
+}
+
+.setting-card p{
+margin:8px 0;
+font-weight:bold;
+}
+
+.logout-btn{
+width:100%;
+padding:15px;
+border:none;
+border-radius:15px;
+background:#ff4d4d;
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+margin-top:20px;
+}
+
+.home-btn{
+display:block;
+text-align:center;
+text-decoration:none;
+padding:15px;
+border-radius:15px;
+background:#00b050;
+color:white;
+font-size:18px;
+font-weight:bold;
+margin-top:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="profile-container">
+
+<div class="profile-header">
+
+<img id="profilePic" class="profile-pic" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+<h1 id="displayName">Shopper's Finds User</h1>
+
+<p class="subtitle">Manage your Shopper's Finds account</p>
+
+</div>
+
+<div class="section-title">
+👤 Profile Information
+</div>
+
+<input type="text" id="nameInput" class="input-box" placeholder="Enter your name">
+
+<input type="email" id="emailInput" class="input-box" placeholder="Enter your email">
+
+<input type="text" id="photoInput" class="input-box" placeholder="Paste profile photo URL">
+
+<button class="save-btn" onclick="saveProfile()">
+💾 Save Changes
+</button>
+
+<div class="section-title">
+⚙️ Account Settings
+</div>
+
+<div class="setting-card">
+
+<p>📧 Email: <span id="emailDisplay">Not Set</span></p>
+
+<p>🛒 Member: Shopper's Finds</p>
+
+<p>🔥 Status: Active</p>
+
+<p>💙 Theme: Shopper's Finds Blue</p>
+
+</div>
+
+<a href="deals.html" class="home-btn">
+🛍️ Browse Deals
+</a>
+
+<button class="logout-btn" onclick="logout()">
+🚪 Logout
+</button>
+
+</div>
+
+<script>
+
+let savedName = localStorage.getItem("sf_name");
+let savedEmail = localStorage.getItem("sf_email");
+let savedPhoto = localStorage.getItem("sf_photo");
+
+if(savedName){
+document.getElementById("displayName").innerText = savedName;
+document.getElementById("nameInput").value = savedName;
+}
+
+if(savedEmail){
+document.getElementById("emailDisplay").innerText = savedEmail;
+document.getElementById("emailInput").value = savedEmail;
+}
+
+if(savedPhoto){
+document.getElementById("profilePic").src = savedPhoto;
+document.getElementById("photoInput").value = savedPhoto;
+}
+
+function saveProfile(){
+
+let name = document.getElementById("nameInput").value;
+let email = document.getElementById("emailInput").value;
+let photo = document.getElementById("photoInput").value;
+
+localStorage.setItem("sf_name",name);
+localStorage.setItem("sf_email",email);
+localStorage.setItem("sf_photo",photo);
+
+document.getElementById("displayName").innerText = name;
+document.getElementById("emailDisplay").innerText = email;
+
+if(photo){
+document.getElementById("profilePic").src = photo;
+}
+
+alert("Profile Updated Successfully!");
+
+}
+
+function logout(){
+
+localStorage.removeItem("sf_name");
+localStorage.removeItem("sf_email");
+localStorage.removeItem("sf_photo");
+
+window.location.href="login.html";
+
+}
+
+</script>
+
+</body>
+</html
