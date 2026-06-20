@@ -7,6 +7,30 @@
 <title>Shopper's Finds Deals</title>
 
 <style>
+<script>
+
+function searchDeals(){
+
+let input = document.getElementById("dealSearch").value.toLowerCase();
+
+let products = document.getElementsByClassName("searchable-product");
+
+for(let i = 0; i < products.length; i++){
+
+let text = products[i].innerText.toLowerCase();
+
+if(text.includes(input)){
+products[i].style.display = "block";
+}
+else{
+products[i].style.display = "none";
+}
+
+}
+
+}
+
+</script>
 
 *{
 margin:0;
