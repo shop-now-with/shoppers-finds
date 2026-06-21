@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promote With Shopper's Finds</title>
+
+<style>
+
+{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(-45deg,#0066ff,#00bfff,#004cff,#6dbdff);
+background-size:400% 400%;
+animation:bgMove 10s ease infinite;
+overflow-x:hidden;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/ TOP BAR /
+
+.topbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:70px;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 18px;
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
+z-index:9999;
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-area img{
+width:45px;
+height:45px;
+border-radius:12px;
+}
+
+.logo-text{
+font-size:18px;
+font-weight:900;
+color:#0066ff;
+}
+
+.menu-btn{
+font-size:28px;
+font-weight:bold;
+cursor:pointer;
+color:#0066ff;
+}
+
+.dropdown-menu{
+display:none;
+position:absolute;
+right:15px;
+top:70px;
+width:290px;
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,102,255,0.3);
+border:3px solid #0066ff;
+}
+
+.dropdown-menu a{
+display:block;
+padding:18px;
+text-decoration:none;
+font-weight:900;
+color:#0066ff;
+border-bottom:1px solid #e5efff;
+}
+
+.dropdown-menu a:hover{
+background:#0066ff;
+color:white;
+}
+
+/ MAIN */
+
+.container{
+padding-top:120px;
+padding-left:20px;
+padding-right:20px;
+padding-bottom:50px;
+text-align:center;
+}
+
+.main-card{
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(12px);
+padding:35px;
+border-radius:35px;
+border:2px solid rgba(255,255,255,0.2);
+animation:float 4s ease-in-out infinite;
+max-width:900px;
+margin:auto;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
+}
+
+h1{
+font-size:3rem;
+color:white;
+margin-bottom:15px;
+}
+
+.subtitle{
+color:white;
+font-size:1.2rem;
+margin-bottom:30px;
+}
+
+.info-box{
+background:white;
+border-radius:30px;
+padding:25px;
+margin-top:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+animation:pulse 3s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.02);}
+100%{transform:scale(1);}
+}
+
+.info-box h2{
+color:#0066ff;
+margin-bottom:15px;
+}
+
+.info-box p{
+font-size:17px;
+line-height:1.8;
+color:#222;
+}
+
+.contact-btn{
+display:inline-block;
+margin-top:35px;
+padding:20px 45px;
+background:linear-gradient(135deg,#0066ff,#00bfff);
+color:white;
+text-decoration:none;
+font-size:20px;
+font-weight:900;
+border-radius:60px;
+border:4px solid white;
+box-shadow:0 10px 30px rgba(0,102,255,0.4);
+animation:glow 2s infinite;
+}
+
+@keyframes glow{
+0%{box-shadow:0 0 10px rgba(255,255,255,0.5);}
+50%{box-shadow:0 0 30px rgba(255,255,255,1);}
+100%{box-shadow:0 0 10px rgba(255,255,255,0.5);}
+}
+
+.footer{
+margin-top:40px;
+color:white;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+
+<div class="logo-area">
+<img src="DCEB2DE4-214C-428E-B03C-C2185778806E.jpeg">
+<div class="logo-text">Shopper's Finds</div>
+</div>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div id="dropdownMenu" class="dropdown-menu">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="trending.html">🔥 Trending Products</a>
+
+<a href="about.html">💙 About Shopper's Finds</a>
+
+<a href="promote.html">📢 Promote Your Products</a>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="main-card">
+
+<h1>📢 Promote With Shopper's Finds</h1>
+
+<p class="subtitle">
+Reach more customers through our growing deal-sharing community.
+</p>
+
+<div class="info-box">
+
+<h2>🚀 Grow Your Reach</h2>
+
+<p>
+Shopper's Finds helps affiliates, businesses, creators and online sellers promote their products to an engaged audience looking for deals and discounts. We share selected products across our Telegram groups, WhatsApp communities and social media channels to help maximize visibility and reach.
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h2>🌍 Multi-Platform Promotion</h2>
+
+<p>
+Your product can be featured across our network of communities where shoppers actively search for offers, trending products and valuable recommendations. Our goal is to connect great products with interested buyers.
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h2>💙 Partner With Us</h2>
+
+<p>
+Whether you're an affiliate marketer, small business owner or brand representative, we're always looking for quality products to showcase. Contact us directly to discuss promotion opportunities.
+</p>
+
+</div>
+
+<a class="contact-btn" href="https://wa.me/918606349917">
+💬 CONTACT ON WHATSAPP
+</a>
+
+<div class="footer">
+Shopper's Finds • Promote Smarter • Reach Further 🚀
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function toggleMenu(){
+var menu=document.getElementById("dropdownMenu");
+
+if(menu.style.display==="block"){
+menu.style.display="none";
+}else{
+menu.style.display="block";
+}
+}
+
+</script>
+
+</body>
+</html>
